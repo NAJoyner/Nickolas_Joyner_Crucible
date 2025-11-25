@@ -19,7 +19,7 @@ class SimpleCrucible:
     def __init__(self, model_path):
         """Initialize the LLM and set up the system prompt."""
         print("=" * 60)
-        print("🔥 Loading CRUCIBLE...")
+        print("Loading CRUCIBLE...")
         print("=" * 60)
         
         # Load the model
@@ -46,8 +46,7 @@ Be concise, scientific, and helpful. Explain your identifications briefly."""
         # Conversation history
         self.history = []
         
-        print("✅ CRUCIBLE ready!")
-        print("=" * 60)
+        print("CRUCIBLE ready!")
     
     def chat(self, user_message):
         """
@@ -133,13 +132,13 @@ Be concise, scientific, and helpful. Explain your identifications briefly."""
     def reset(self):
         """Clear conversation history."""
         self.history = []
-        print("✨ Conversation history cleared.\n")
+        print("Conversation history cleared.\n")
 
 
 def print_welcome():
     """Print welcome message."""
     print("\n" + "=" * 60)
-    print("🔥 CRUCIBLE - Material Identification Demo")
+    print("CRUCIBLE - Material Identification Demo")
     print("=" * 60)
     print("""
 Computational Repository for Unified Classification 
@@ -158,7 +157,7 @@ Commands:
 def print_help():
     """Print help with example queries."""
     print("\n" + "=" * 60)
-    print("📚 Example Queries:")
+    print("Example Queries:")
     print("=" * 60)
     print("""
 1. "Identify a material with peaks at 465 and 610 cm^-1, 
@@ -187,7 +186,7 @@ def main():
     
     import os
     if not os.path.exists(model_path):
-        print("❌ ERROR: Model file not found!")
+        print("ERROR: Model file not found!")
         print(f"Expected location: {model_path}")
         print("\nPlease download the model first.")
         return
@@ -214,7 +213,7 @@ def main():
             
             # Handle commands
             if user_input.lower() in ['exit', 'quit']:
-                print("\n👋 Goodbye! Keep exploring materials!\n")
+                print("\nGoodbye! Keep exploring materials!\n")
                 break
             
             if user_input.lower() == 'clear':
@@ -233,14 +232,14 @@ def main():
                 print(response + "\n")
                 
             except Exception as e:
-                print(f"❌ Error: {e}\n")
+                print(f"Error: {e}\n")
         
         except KeyboardInterrupt:
-            print("\n\n👋 Interrupted. Type 'exit' to quit.\n")
+            print("\n\nInterrupted. Type 'exit' to quit.\n")
             continue
         
         except EOFError:
-            print("\n👋 Goodbye!\n")
+            print("\nGoodbye!\n")
             break
 
 
