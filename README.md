@@ -1,1 +1,1 @@
-# CRUCIBLE: The Unknown Materials Classification AI Agent 
+# CRUCIBLE: The AI Materials Classification Agent
